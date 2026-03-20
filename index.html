@@ -1,0 +1,33 @@
+#include <stdio.h>
+   struct etudiant{
+     char nom[23],prenom [23], metricule[23];
+     float moy;};
+    int main (){
+    int n;
+    printf("vuillez saisir le nombre d'etudiant :");
+        scanf("%d",&n);
+          struct etudiant e[n];
+          int max=0,min=0;
+        for(int i=0;i<n;i++){
+            printf("le nom :");
+            scanf("%s",e[i].nom);
+            printf("le prenom :");
+            scanf("%s",e[i].prenom);
+             printf("la moyenne :");
+            scanf("%f",&e[i].moy);}
+             for(int i=0;i<n;i++){
+                if( e[i].moy<max){
+                  max=i;}
+                if(e[i].moy>min){
+                    min=i;}}
+           printf("l'etudiant qui la plus grand moyenne est : ");
+           printf("%s\t",e[max].prenom);
+           printf("%s\t",e[max].nom);
+           printf("%f\n",e[max].moy);
+
+           printf("ET l'etudiant qui la plus petite moyenne est : ");
+           printf("%s\t",e[min].prenom);
+           printf("%s\t",e[min].nom);
+           printf("%f\n",e[min].moy);
+    return 0;
+    }
